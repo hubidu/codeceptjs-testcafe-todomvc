@@ -11,7 +11,7 @@ Before(async (I, TodosPage) => {
 /**
  * Happy Path tests
  */
-Scenario('Mark todos as completed', async (I, TodosPage) => {
+Scenario.skip('Mark todos as completed', async (I, TodosPage) => {
   I.say('Given I have some todos')
 
   I.say('When I mark the first one as completed')
@@ -28,7 +28,7 @@ Scenario('Mark todos as completed', async (I, TodosPage) => {
   I.saveScreenshot('mark-todos-as-completed.png')
 })
 
-Scenario('Unmark completed todos', async (I, TodosPage) => {
+Scenario.skip('Unmark completed todos', async (I, TodosPage) => {
     I.say('Given I have some todos')
   
     I.say('And I mark the first one as completed')

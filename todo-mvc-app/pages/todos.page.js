@@ -25,6 +25,7 @@ module.exports = {
 
     async markNthAsCompleted(nthTodo) {
         const classNames = await I.grabAttributeFrom(nthTodoItem(nthTodo), 'class')
+        console.log(classNames)
         assert(classNames.indexOf('completed') < 0, 'Expected todo to be not already marked as completed')
         I.click(nthTodoCheckbox(nthTodo))
     },
@@ -63,7 +64,7 @@ module.exports = {
 
     deleteNthTodo(nthTodo) {
         // Use a custom helper function to hover over an todo item
-        I.hover(nthTodoItem(nthTodo))
+        I.hover(`.todo-list li:nth-child(${nthTodo})`)
         I.click(nthTTodoDeleteButton(nthTodo))
     },
 
