@@ -1,5 +1,5 @@
 
-type ICodeceptCallback = (i: CodeceptJS.I, Todos02Page:CodeceptJS.Todos02Page, Todos03Page:CodeceptJS.Todos03Page, Todos04Page:CodeceptJS.Todos04Page, Todos05Page:CodeceptJS.Todos05Page, Todos06Page:CodeceptJS.Todos06Page, TodosBddPage:CodeceptJS.TodosBddPage, ...args: any) => void;
+type ICodeceptCallback = (i: CodeceptJS.I, Todos02Page:CodeceptJS.Todos02Page, Todos03Page:CodeceptJS.Todos03Page, Todos04Page:CodeceptJS.Todos04Page, Todos05Page:CodeceptJS.Todos05Page, TodosPage:CodeceptJS.TodosPage, TodosBddPage:CodeceptJS.TodosBddPage, ...args: any) => void;
 
 declare class FeatureConfig {
   retry(times: number): FeatureConfig
@@ -306,7 +306,7 @@ declare namespace CodeceptJS {
   }
 
 
-  export interface Todos06Page {
+  export interface TodosPage {
     goto() : void,
     enterTodo(todo: string) : void,
     enterTodos(todoItems: string) : void,

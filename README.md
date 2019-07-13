@@ -1,13 +1,12 @@
-# Testing TODO MVC app using codeceptjs and puppeteer
+# Testing TODO MVC app using codeceptjs and testcafe
 
-This is the code for a one day beginner workshop about UI Testing with CodeceptJS we are hosting at [CHECK24](http://www.check24.de).
+Simple project to demo the use of the TestCafe helper in CodeceptJS
 
-We are creating a test project from scratch and are covering all important concepts like:
+## Running the tests
 
-- Puppeteer configuation
-- Debugging and troubleshooting tests
-- Organizing features and scenarios
-- Page Objects
-- Custom Helpers
+```
+  npm install
 
-The slides for the workshop are [here](https://docs.google.com/presentation/d/107cSgYMxBpR5RahALQkat9G8WBmDqSRqfwb9r3CBpo4/edit?usp=sharing)
+  npx codeceptjs run --steps
+```
+

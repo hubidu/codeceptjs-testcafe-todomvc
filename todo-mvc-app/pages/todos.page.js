@@ -2,11 +2,6 @@ const assert = require('assert')
 
 const I = actor();
 
-// const nthTodoCheckbox = nth => `.todo-list li:nth-child(${nth}) > div > input` // ({ xpath: `(//*[contains(@class,"todo-list")]/li/div/input)[${nth}]`})
-// const nthTTodoDeleteButton = nth => `.todo-list li:nth-child(${nth}) > div > button` // ({ xpath: `(//*[contains(@class,"todo-list")]/li/div/button)[${nth}]`})
-// const nthTodoEditField = nth => `.todo-list li:nth-child(${nth}) > form > input` // ({ xpath: `(//*[contains(@class,"todo-list")]/li/form/input)[${nth}]`})
-// const nthTodoItem = nth => `.todo-list li:nth-child(${nth})` // ({ xpath: `(//*[contains(@class,"todo-list")]/li)[${nth}]`})
-
 const nthTodoCheckbox = nth => locate('div > input').inside(`.todo-list li:nth-child(${nth})`) 
 const nthTTodoDeleteButton = nth => locate('div > button').inside(`.todo-list li:nth-child(${nth})`) 
 const nthTodoEditField = nth => locate('form > input').inside(`.todo-list li:nth-child(${nth})`) 
@@ -15,9 +10,6 @@ const nthTodoItem = nth => locate('.todo-list li').at(nth).as(`${nth} todo item`
 module.exports = {
     goto() {
         I.amOnPage('http://todomvc.com/examples/angularjs/#/')
-        I.refreshPage()
-        I.executeScript(() => sessionStorage.clear())
-        I.waitForVisible('.new-todo')    
     },
 
     enterTodo(todo) {
